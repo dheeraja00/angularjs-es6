@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="weather">
+<head>
+	<title>Weather Report</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container" ng-controller="WeatherController as weatherctrl">
+		<header>
+			<h1>Weather Report</h1>
+		</header>
+		<main>
+			<div ng-if="!weatherctrl.weatherFetched && !weatherctrl.showLocationFrom">
+				<p>To get current weather report for your location, please accept the request to access your location in <strong>{{weatherctrl.timer}} secs</strong>...</p>
+				<p>or provide your location manually <button class="btn btn-primary btn-sm" ng-click="weatherctrl.showLocationFrom = true">Enter location</button></p>
+			</div>
+
+			<div class="message error-message" ng-if="!weatherctrl.apiStatus">{{weatherctrl.errorMessage}}</div>
+			<location-form ng-if="weatherctrl.showLocationFrom && !weatherctrl.weatherFetched"></location-form>
+			<weather-card ng-if="weatherctrl.weatherFetched"></weather-card>
+		</main>
+		<footer></footer>
+	</div>
+	<script type="text/javascript" src="dist/bundle.min.js"></script>
+</body>
+</html>

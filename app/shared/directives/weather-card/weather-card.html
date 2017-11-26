@@ -1,0 +1,25 @@
+<!-- Weather card -->
+<section class="weather-card">
+	<h4>Weather of {{weatherctrl.weatherReport.name}}, {{weatherctrl.weatherReport.sys.country}}</h4>
+	<div class="weather-container">
+		<p>It's <span class="img-crop"><img ng-src="http://openweathermap.org/img/w/{{weatherctrl.weatherReport.weather[0].icon}}.png" alt="icon"></span> today, with temprature of <strong>{{weatherctrl.weatherReport.main.temp}}&deg;F</strong></p>
+		<h5>Main details</h5>
+		<ul>
+			<li><label>Temperature </label> {{weatherctrl.weatherReport.main.temp}}&deg;F</li>
+			<li><label>Min Temp </label> {{weatherctrl.weatherReport.main.temp_min}}&deg;F</li>
+			<li><label>Max Temp </label> {{weatherctrl.weatherReport.main.temp_max}}&deg;F</li>
+			<li><label>Humidity </label> {{weatherctrl.weatherReport.main.humidity}}%</li>
+			<li><label>Pressure </label> {{weatherctrl.weatherReport.main.pressure}}</li>
+		</ul>
+		<h5>Wind</h5>
+		<ul>
+			<li><label>Speed</label> {{weatherctrl.weatherReport.wind.speed}} mtr/sec</li>
+			<li><label>Degree</label> {{weatherctrl.weatherReport.wind.deg}} degrees</li>
+		</ul>
+		<h5>Sunrise & Sunset</h5>
+		<ul>
+			<li><label>Sunrise</label> {{weatherctrl.weatherReport.sys.sunrise * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</li>
+			<li><label>Sunset</label> {{weatherctrl.weatherReport.sys.sunset * 1000 | date:'yyyy-MM-dd HH:mm:ss'}}</li>
+		</ul>
+	</div>
+</section>

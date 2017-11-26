@@ -1,0 +1,29 @@
+// This contains custom styles, also extends components of bootstrap as per requirement 
+
+/* Base styles */
+@import "base/normalize";
+@import "base/typography";
+
+/* Helper mixins & variables */
+@import "helpers/variables";
+@import "helpers/mixins";
+
+/* Current theme */
+@import "themes/home";
+
+/* Layout like header, footer, sidebars, etc...*/
+@import "layout/container";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+/* Components files */
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/message";
+
+/* Page specific styles */
+@import "pages/weather_view";
+
+/* Here comes the vendor files like bootstrap, material, getmdl, jquery ui, etc.. */

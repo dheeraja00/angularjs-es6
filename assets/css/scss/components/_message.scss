@@ -1,0 +1,12 @@
+.message {
+	width: 95%;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	border-radius: 0.2rem;
+
+	&.error-message {
+		color: #a94442;
+    	background-color: #f2dede;
+    	border: 0.1rem solid #ebccd1;
+	}
+}

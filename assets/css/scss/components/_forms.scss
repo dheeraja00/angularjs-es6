@@ -1,0 +1,36 @@
+[name="location-form"] {
+	width: 30%;
+	@media(min-width: 520px) {
+		& {
+			width: 100%;
+		}
+	}
+	@media(min-width: 720px) {
+		& {
+			width: 50%;
+		}
+	}
+	@media(min-width: 900px) {
+		& {
+			width: 40%;
+		}
+	}
+
+	.divider {
+		text-align: center;
+		font-style: italic;
+		color: #666;
+		margin: 0.8rem 0;
+	}
+}
+.form-group {
+	input {
+		width: 95%;
+		border: 0.1rem solid #ccc;
+		padding: 0.5rem;
+		background-color: #FFF;
+	}
+	button {
+		margin-top: 1rem;
+	}
+}

@@ -1,0 +1,4 @@
+@mixin heading-border-bottom($padding: 0.5rem) {
+	border-bottom: $heading-border-size $heading-border-style $heading-border-color;
+	padding-bottom: $padding;
+}

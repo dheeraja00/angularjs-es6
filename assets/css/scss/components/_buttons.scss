@@ -1,0 +1,30 @@
+.btn {
+	border: 0.1rem solid #ccc;
+	background-color: #FFF;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+
+	&.btn-primary {
+		background-color: $btn-primary-color;
+		color: #fff;
+		border-color: $btn-primary-color;
+
+		&:hover {
+			background-color: $btn-primary-color-hover;
+		}
+	}
+
+	&.btn-sm {
+		padding: 0.2rem 0.5rem;
+		font-size: 0.8rem;
+	}
+
+	&[disabled] {
+		cursor: not-allowed;
+		opacity: 0.6;
+		&:hover {
+			background-color: $btn-primary-color;
+		}
+	}
+}
